@@ -1,0 +1,20 @@
+sayi1 = int(input("Sayi1 : "))
+sayi2 = int(input("Sayi2 : "))
+
+#int yaparak girilen değeri integera çeviriyoruz.
+"""
+
+sayi_1 = input("Sayi1 : ")
+sayi_2 = input("Sayi2 : ")
+
+toplam_1 = sayi_1 + sayi_2
+
+print(toplam_1)
+
+"""
+#burda str olarak girildiğini alıgıladağığı için yan yana yazacak 10 ve 20 yi 1020 olarak yazacak
+
+toplam = sayi1 + sayi2
+
+print(toplam)
+
