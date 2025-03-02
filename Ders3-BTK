@@ -1,0 +1,29 @@
+pi = 3.14
+
+r = float(input("Yarı Çap : "))
+
+alan = pi * (r ** 2) # ** üs alma operatörüdür.
+cevre = 2 * pi * r
+
+print("Alan : " , alan)
+print("Çevre : " , cevre)
+
+"""
+print("Alan : " + str(alan))
+print("Çevre : ", str(cevre))
+
+gibi de olabilir.2
+
+
+"""
+
+
+#-----------------------------------------------------------------
+
+
+mesafeKm = input("Km: ")
+mesafeMil = float(mesafeKm) / 1.609344
+
+mesafeMil = round(mesafeMil, 2) # 2 basamaklı yuvarlama yuvarlama işlemi yapar.
+
+print(mesafeKm + " km = " + str(mesafeMil) + " mil'dir.")
