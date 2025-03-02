@@ -1,0 +1,55 @@
+kursAdi = "Btk Akademi Python ile Programlama Dersleri"
+website = "https://www.btkakademi.gov.tr"
+
+sonuc = ' Btk Akademi '.strip()
+print(sonuc)
+
+#------------------------------
+
+sonuc = kursAdi.lower()
+print(sonuc)
+
+#------------------------------
+
+sonuc = website.count('.')
+print(sonuc)
+
+#------------------------------
+
+sonuc = website.startswith('https')
+print(sonuc)
+
+#------------------------------
+
+sonuc = website.endswith('tr')
+print(sonuc)
+
+#------------------------------
+
+sonuc = kursAdi.isalpha() # tüm karakterler alfabetik mi ? # False
+print(sonuc) #boşluklar var veya sayısal değerler vardır
+
+#------------------------------
+
+sonuc = kursAdi.replace('', '-')
+print(sonuc)
+
+#------------------------------
+
+sonuc = kursAdi.replace('Python', 'Javascript')
+print(sonuc)
+
+#------------------------------
+
+sonuc = website.find('www') # 8. index
+sonuc = website.index('www') # 8. index
+sonuc = website.find('aaa') # hata verir ve -1 döner
+print(sonuc)
+
+#------------------------------
+
+sonuc = kursAdi.split()
+print(sonuc[2])
+print(sonuc)
+
+#------------------------------
