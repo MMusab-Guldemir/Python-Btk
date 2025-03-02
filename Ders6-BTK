@@ -1,0 +1,33 @@
+ad = input('ad: ')
+soyad = input('soyad: ')
+not1 = (input('not1: '))
+not2 = (input('not2: '))
+ortalama = (float(not1) + float(not2)) / 2
+
+sonuc = f'{ad} {soyad} isimli öğrencinin 1. notu : {not1} , 2.notu : {not2} ve  not ortalaması: {ortalama}'
+print(sonuc)
+
+#------------------------------------------------------------------
+
+
+
+title = "Python ile Programlama Dersleri"
+
+adet = len(title)
+# print(adet)
+
+#------------------------
+
+print(title[0:6]) # Python
+
+#------------------------
+
+print(title[:6]) # Python
+print(title[-5:]) # sleri
+
+#------------------------
+
+print(title[::-1]) # irelsreD amalmargorP eli nohtyP
+
+#------------------------
+
