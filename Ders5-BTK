@@ -1,0 +1,19 @@
+# string concat
+
+ad = "Musab"
+soyad = "Güldemir"
+yas = 14
+
+# msj = "My name is " + ad + " " + soyad + " and I am " + str(yas) + " years old."
+
+# string Format
+msj = "My name is {} {} and I am {} years old.".format(ad, soyad, yas)
+msj = "My name is {0} {1} and I am {2} years old.".format(ad, soyad, yas)
+msj = "My name is {a} {s} and I am {y} years old.".format(a=ad, s=soyad, y=yas)
+msj = "My name is {1} {0} and I am {2} years old.".format(ad, soyad, yas)
+
+# F-String
+msj = f"My name is {ad} {soyad} and I am {yas} years old." 
+# f stringi ile değişkenleri direk yazdırabiliriz.
+
+print(msj)
