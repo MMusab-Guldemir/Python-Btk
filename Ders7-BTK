@@ -1,0 +1,20 @@
+mesaj = "Btk akademi, python kursu"
+
+sonuc = mesaj.upper() # Tüm karakterleri büyük yapar
+sonuc = mesaj.lower() # Tüm karakterleri küçük yapar
+sonuc = mesaj.title() # Her kelimenin ilk harfini büyük yapar
+sonuc = mesaj.capitalize() # Sadece ilk kelimenin ilk harfini büyük yapar
+
+sonuc = "abc".islower() # Tüm karakterler küçük mü? # True
+sonuc = "abc".isupper() # Tüm karakterler büyük mü? # false
+sonuc = mesaj.strip() # Başındaki ve sonundaki boşlukları siler
+sonuc = mesaj.split() # Boşluklardan ayırır ve liste yapar
+sonuc = mesaj.split(",") # Virgülden ayırır ve liste yapar
+
+sonuc = mesaj.index("akademi") # Aranan kelimenin başlangıç indexini verir
+sonuc = mesaj.startswith("Btk") # Btk ile başlıyor mu? # True
+sonuc = mesaj.endswith("u") # kursu ile bitiyor mu? # True
+
+sonuc = mesaj.replace("python", "javascript") # Python kelimesini javascript ile değiştirir
+
+print(sonuc)
