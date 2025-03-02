@@ -1,0 +1,44 @@
+musteriAd = "Musab"
+musteriSoyad = "Güldemir"
+musteriTel = "0532 123 45 67"
+musteriAdres = "İstanbul"
+musteriEmail = "info@musabgldmr.com"
+
+urun1Ad = "Samsung S5"
+urun1Fiyat = 2000
+
+urun2Ad = "İphone 15 Pro"
+urun2Fiyat = 55000
+
+urun3Ad = "Hyper X Kulaklık"
+urun3Fiyat = 5500
+
+toplamFiyat = urun1Fiyat + urun2Fiyat + urun3Fiyat
+print("Toplam Ödenen Fiyat: " + str(toplamFiyat))
+print("Toplam Kdv Oranı: ", str(toplamFiyat * 0.18))
+
+#str(100) => "100" + "Ali" => "100Ali"
+#int("100") => 100 + 50 => 150
+
+isim = "Musab"
+yas = 14
+kilo = 55.3
+ogrenciMi = True
+
+print(type(isim)) #str
+print(type(yas)) #int
+print(type(kilo)) #float
+print(type(ogrenciMi)) #bool 
+
+#tiplerini alıyoruz
+
+print("İsim: " + isim + " Yaş: " + str(yas) + " Kilo: " + str(kilo) + " Öğrenci Mi: " + str(ogrenciMi))
+
+
+"""
+
+t = type(isim)
+print(t)
+
+"""
+
