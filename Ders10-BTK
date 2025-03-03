@@ -1,0 +1,27 @@
+programlama_dilleri = ["Python", "Java", "C#", "C++", "JavaScript"]
+
+sonuc = programlama_dilleri
+sonuc = type(programlama_dilleri)
+sonuc = programlama_dilleri[0:2]
+sonuc = programlama_dilleri[:2]
+sonuc = programlama_dilleri[:]
+sonuc = programlama_dilleri[-3:-1]
+sonuc = programlama_dilleri[-3:]
+
+#Günceleme
+programlama_dilleri[-1] = "Php"
+
+sonuc = programlama_dilleri
+sonuc = len(programlama_dilleri)
+sonuc = programlama_dilleri + ["Delphi", "Go"]
+
+sonuc = "Python" in programlama_dilleri
+sonuc = "React" in programlama_dilleri
+
+
+del programlama_dilleri[0]
+
+for dil in programlama_dilleri:
+    print(dil)
+
+print(sonuc)
