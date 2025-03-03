@@ -1,0 +1,26 @@
+kurum = "BTK AKADEMİ".split() # str to list
+
+print(type(kurum))
+print(kurum)
+print(kurum[0])
+print(kurum[1])
+
+sayilar = [1,2,3,4,5]
+isimler = ["Ahmet","Mehmet","Ayşe"]
+
+print(type(sayilar))
+print(type(sayilar[0]))
+
+print(type(isimler))
+print(type(isimler[0]))
+
+ogrenci = ["Çınar", "Turan",60,70,50]
+
+print(ogrenci[0] + " " + ogrenci[1])
+ortalama = (ogrenci[2] + ogrenci[3] + ogrenci[4]) / 3
+print(ortalama)
+
+ogrenciler = ["Çınar", "Turan",60,70,50], ["Ali", "Turan",60,70,50]
+
+print(ogrenciler[0][0]) # Çınar
+print(ogrenciler[1][0]) # Ali
