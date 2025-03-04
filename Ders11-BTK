@@ -1,0 +1,37 @@
+markalar = ["Toyota", "Bmw", "Mercedes", "Audi"]
+
+sonuc = len(markalar) # Eleman sayısı
+
+sonuc = markalar[0] # İlk eleman
+sonuc = markalar[-1] # Son eleman
+
+markalar[2] = "Togg" # Eleman değiştirme
+sonuc = markalar
+
+sonuc = "Togg" in markalar # Eleman kontrolü
+sonuc = "Togg" not in markalar # Eleman kontrolü
+
+sonuc = markalar[-2:] # Son iki eleman
+
+sonuc = markalar + ["Nissan", "Ferari"] # Listeye eleman ekleme
+
+del markalar[-1] # Eleman silme
+sonuc = markalar
+
+print(sonuc)
+
+ogrenci1 = ["Yiğit","Bilgi",2010,[70,80,90]]
+ogrenci2 = ["Ada","Bilgi",2012,[80,80,70]]
+ogrenci3 = ["Sena","Turan",2013,[80,70,90]]
+
+ogrenciler = [ogrenci1,ogrenci2,ogrenci3]
+
+yasYigit = 2025 - ogrenciler[0][2]
+yasAda = 2025 - ogrenciler[1][2]
+yasSena = 2025 - ogrenciler[2][2]
+
+notYigit = (ogrenciler[0][3][0] + ogrenciler[0][3][1] + ogrenciler[0][3][2]) / 3
+notAda = (ogrenciler[1][3][0] + ogrenciler[1][3][1] + ogrenciler[1][3][2]) / 3
+notSena = (ogrenciler[2][3][0] + ogrenciler[2][3][1] + ogrenciler[2][3][2]) / 3
+
+print(notYigit , notAda , notSena) 
