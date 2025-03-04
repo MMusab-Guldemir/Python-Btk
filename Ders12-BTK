@@ -1,0 +1,35 @@
+sayilar = [4,6,8,2,56,78,90,4,4]
+isimler = ["Ahmet","Canan","Zeynep","Gökhan","Ali","Canan"]
+
+sonuc = min(sayilar)
+sonuc = max(sayilar)
+sonuc = min(isimler)
+sonuc = max(isimler)
+
+#--------------------------------------------
+
+sayilar.append(12)
+isimler.append("Musab")
+
+sayilar.insert(0, 100)
+sayilar.insert(-1, 100)
+sayilar.insert(-3, 100)
+sayilar.insert(len(sayilar), 100)
+
+#--------------------------------------------
+
+sayilar.pop()
+sayilar.pop(0)
+isimler.remove("Canan")
+
+#--------------------------------------------
+
+sayilar.sort()
+isimler.sort()
+sayilar.sort(reverse=True)
+sayilar.reverse()
+
+sonuc = sayilar.count(4)
+sonuc = isimler.count("Canan")
+
+print(sonuc)    
