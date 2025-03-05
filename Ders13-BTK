@@ -1,0 +1,58 @@
+customers = ["SadikTuran","AhmetYılmaz","CinarTuran","YigitBilgi"]
+order_totals = [12000,13000,5000,15000]
+
+customers.append("SadikTuran")
+order_totals.append(5000)
+
+#--------------------------------------------
+
+customers.pop()
+order_totals.pop()
+
+sonuc = customers
+sonuc = order_totals
+
+#--------------------------------------------
+
+# sonuc = f"{customers[0]} isimli müşterinin sipariş toplamı{order_totals[0] + order_totals[4]}  TL dir."
+# sonuc = f"{customers[1]} isimli müştariş toplamı{order_totals[1] }  TL dir."
+
+#--------------------------------------------
+
+sonuc = customers.sort()
+# print(customers)
+
+order_totals.sort()
+order_totals.reverse()
+print(order_totals)
+
+#--------------------------------------------
+
+sonuc = min(order_totals)
+
+sonuc = customers.count("SadikTuran")
+
+customers.remove('AhmetYılmaz')
+
+sonuc = customers
+
+#--------------------------------------------
+
+# customers.clear()
+# order_totals.clear()
+
+sonuc = customers
+sonuc = order_totals
+
+#--------------------------------------------
+
+userName = input("Müşteri Adi: ")
+toplamı = input("Toplami: ")
+
+customers.append(userName)
+order_totals.append(toplamı)
+
+
+
+print(order_totals)
+print(customers)
