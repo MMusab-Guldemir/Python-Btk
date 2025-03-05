@@ -1,0 +1,28 @@
+sehirler =  ['Kocaeli', 'Istanbul']
+plakalar = [41, 34]
+
+# s1 = sehirler[0] + str(plakalar[0])
+
+# ----------------------------------------------
+
+# # Key - Value
+
+print(plakalar[0], sehirler[0])
+print(plakalar[1], sehirler[1])
+
+# ----------------------------------------------
+
+# # Dictionary
+
+plakalar = {
+    'Kocaeli': 41,
+    'Istanbul': 34,
+    'Izmir': 36
+}
+
+plakalar['Izmir'] = 35
+#Güncelleme Yaptık
+
+print(plakalar['Kocaeli'])
+print(plakalar['Istanbul'])
+print(plakalar['Izmir'])
