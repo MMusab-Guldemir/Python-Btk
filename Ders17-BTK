@@ -1,0 +1,23 @@
+yemekTarifi = {
+    "yemekAdi": "Makarna",
+    "yemekTarifi": "Makarna, su ve tuz ile yapılır.",
+    "resim": "1.jpg",
+}
+
+sonuc = yemekTarifi["yemekTarifi"]
+sonuc = yemekTarifi.get("yemekTarifi") # get metodu ile de aynı sonucu alabiliriz fark biri parantezli.
+sonuc = yemekTarifi.keys() # (['yemekAdi', 'yemekTarifi', 'resim'])
+sonuc = yemekTarifi.values() # (['Makarna', 'Makarna, su ve tuz ile yapılır.', '1.jpg'])
+sonuc = yemekTarifi.items() # ([('yemekAdi', 'Makarna'), ('yemekTarifi', 'Makarna, su ve tuz ile yapılır.'), ('resim', '1.jpg')])
+
+# update items
+yemekTarifi["yemekAdi"] = "Köfte"
+yemekTarifi.update({"yemekAdi": "Köfte"})
+yemekTarifi.update({"yemekAdi2": "Pilav"}) # yeni bir eleman ekler
+yemekTarifi.clear() # tüm elemanları siler
+
+# copy => referans
+
+sonuc = yemekTarifi
+
+print(sonuc) 
