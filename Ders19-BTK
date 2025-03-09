@@ -1,0 +1,27 @@
+# x = 10
+# y = 20
+
+# x = y
+
+# y = 30
+
+# print(x, y) # 20 30
+
+# a = ["elma", "armut"] # Lists
+# b = ["elma", "armut"]
+
+# a = b
+
+# a[0] = "karpuz"
+
+print(a, b) # ['karpuz', 'armut'] ['karpuz', 'armut']
+
+# Liste kopyalama
+listeA = [10, 20]
+listeB = listeA.copy()  # 1. yöntem özel bir alan açar
+listeB = list(listeA) # 2. yöntem
+
+
+listeB[0] = 30
+
+print(listeA, listeB) # (10, 20) (10, 20)
