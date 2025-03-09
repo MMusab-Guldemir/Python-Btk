@@ -1,0 +1,27 @@
+meyveler = {"elma", "armut", "muz", "çilek"} # Sets
+meyveler2 = {"elma", "karpuz", "kavun", "çilek"}
+
+# sonuc = meyveler[0] # Hata verir
+# aynı kelimeler yazılmaz
+
+# for x in meyveler:
+#     print(x)
+
+# sonuc = "muz" in meyveler # True
+
+meyveler.add("karpuz") # {"elma", "armut", "muz", "çilek", "karpuz"}
+#rasgele bir indexe ekler
+
+meyveler.update(meyveler2)
+
+# meyveler.remove("vişne") #raise an error not in sets
+#aynı
+meyveler.discard("armut") 
+
+meyveler.pop() 
+
+meyveler.clear()
+
+sonuc = meyveler
+
+print(sonuc)
