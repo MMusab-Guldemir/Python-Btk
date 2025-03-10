@@ -1,0 +1,41 @@
+veli_izni = True
+yas = 17
+
+sonuc = (veli_izni) or (yas >= 18)
+
+print(sonuc)
+
+#---------------------------------------------
+
+dersNotu = 50
+sonuc = (dersNotu >= 50 and dersNotu <= 100)
+print(f"Ders geçme durumu: {sonuc}")
+
+#---------------------------------------------
+
+ortalama = 75
+zayifSayisi = 0
+
+sonuc = (ortalama >= 70) and (zayifSayisi == 0)
+
+print(sonuc)
+
+#---------------------------------------------
+
+egitim = "önlisans"
+sigara_icme = False
+
+sonuc = (egitim == "önlisans" or egitim == "lisans") and (not(sigara_icme))
+
+#---------------------------------------------
+
+email = "mmusabgldmr@gmail.com"
+username = "Musab"
+password = "12345"
+
+girilen_bilgi = input("email yada username: ")
+girilen_parola = input("parola: ")
+
+sonuc = (email == girilen_bilgi or username == girilen_bilgi) and (password == girilen_parola)
+
+print(sonuc)
