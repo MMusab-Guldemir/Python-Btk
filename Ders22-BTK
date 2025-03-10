@@ -1,0 +1,26 @@
+a, b, c = 4, 8, (12, 2)
+
+# sayi1 = int(input("Birinci sayıyı giriniz: "))
+# sayi2 = int(input("İkinci sayıyı giriniz: "))
+
+# carpim = sayi1 * sayi2
+# toplam = a + b + c[0] + c[1]
+
+# sonuc = carpim - toplam
+# print("Sonuç: ", sonuc)
+
+
+# sonuc = (c[0] + c[1]) // b
+
+sonuc = (a + b + (c[0] + c[1])) % 7
+
+sonuc = b ** a
+
+a, *b, c = (2, 4, 6, 8, 13) 
+# a = 2, b = [4, 6, 8], c = 13 yıldızdan  dolayı arada kalanlar b ye eşitlenmiştir.
+print(c ** 3) # küpünü alır.
+
+a, b, *c = (2, 4, 6, 8, 13)
+# c = [6, 8, 13] yıldızdan dolayı arada kalanlar c ye eşitlenmiştir.
+
+print("Sonuç: ", sonuc)  
