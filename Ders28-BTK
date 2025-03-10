@@ -1,0 +1,30 @@
+if(True):
+    print("Merhaba")
+if(False):
+    print("Merhaba") #yazdırmaz
+
+
+email = "mmusabgldmr@gmail.com"
+parola = "12345"
+
+login = (email == "mmusabgldmr@gmail.com") and (parola == "12345")
+
+if(login):
+    print("Login olundu")
+
+else:
+    print("email yada parola yanlis")
+
+if(not(login)):
+    print("email yada parola yanlis")
+
+else:
+    print("Login olundu") 
+
+if(email == "mmusabgldmr@gmail.com"):
+    if(parola == "12345"):
+        print("Login olundu")
+    else:
+        print("Parola yanliş")
+else:
+    print("email yanliş")
