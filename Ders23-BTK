@@ -1,0 +1,36 @@
+# Karşılaştırma Operatörleri
+"""
+
+a == b 
+a != b
+a > b
+a < b
+a >= b #Büyük Eşit
+a <= b #Kücük Eşit
+
+"""
+
+a, b, c, d = 2, 2, 10, 5
+ePosta = "mmusabgldmr@gmail.com"
+parola = "123656"
+
+sonuc = (a == b) #True
+sonuc = (a == c) #False
+sonuc = (a != b) #False Eşit Değil mi ?
+
+# sonuc = (ePosta == input('Eposta: '))
+# sonuc = (parola == input('Parola: ')) 
+
+sonuc = (a > b) #False
+sonuc = (a >= b) #True
+sonuc = (a <= b) #True
+sonuc = (a < b) #False 
+sonuc = (True == 1) 
+sonuc = (False == 0)
+#Değerleri
+# False = 0
+# True = 1 
+
+
+
+print(sonuc)
