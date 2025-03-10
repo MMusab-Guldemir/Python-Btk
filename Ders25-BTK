@@ -1,0 +1,33 @@
+# And x > 5 and x < 10
+# x > 5 or x <10 #Bir tanesinin doğru olması yeter
+#not(x  > 5 and x <10)
+
+# 1- And
+#   True, True  => True
+#   True, False  => False
+#   False, False  => False
+
+# 2- Or
+#   True, True  => True
+#   True, False  => True
+#   False, False  => False
+
+
+
+x = 11
+
+sonuc = (x > 5) and (x < 10) #False aralığı
+
+
+sonuc = (x > 0) and (x % 2 == 0) # X Pozitif çift sayı
+sonuc = (x > 0) or (x % 2 == 0) # X Pozitif yada çift sayı
+
+# 3- Not
+
+sonuc = (x > 0) #True
+sonuc = not(x > 0) #False
+
+
+
+
+print(sonuc)
