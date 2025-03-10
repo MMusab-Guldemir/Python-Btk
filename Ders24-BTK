@@ -1,0 +1,24 @@
+# sayi1 = int(input("1. Sayı: "))
+# sayi2 = int(input("2. Sayı: "))
+
+# sonuc = (sayi1 > sayi1)
+
+# print(f"{sayi1} , {sayi2} ' den büyük {sonuc}")
+
+#----------------------------------------------
+
+sayi = int(input("Sayı: "))
+
+sonuc = (sayi % 2 == 0) # Ture = Çift # False = Tek
+
+print(f"Sayi çift: {sonuc}")
+
+#----------------------------------------------
+
+not1 = int(input("Not 1: "))
+not2 = int(input("Not 2: "))
+not3 = int(input("Not 3: "))
+
+ortalama = (not1 + not2 + not3) / 3
+
+print(f"Ogrencinin not ortalaması: {round(ortalama), 2}, Başarı durumu:  {ortalama >= 50}")
