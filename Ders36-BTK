@@ -1,0 +1,35 @@
+isim = "Musab Güldemir"
+
+for harf in isim:
+    if (harf == "s"):
+        break # s harfine geldikten sonra işlem durur ve Mu yazar
+    print(harf)
+
+for harf in isim:
+    if (harf == "s"):
+        continue # s harfine gelince atlar ve Muab Güldemir yazdırır
+    print(harf)
+
+i = 0
+toplam = 0
+
+while (i < 5):
+    i += 1
+    if (i == 2):
+        continue #iptal ediyor alt kısmı atlar yukarı geri döner
+    print(i)
+    
+while (i < 5):
+    i += 1
+    if (i == 2):
+        break 
+    print(i)
+    
+
+while (i <= 100):
+    i += 1
+    if (i % 2 == 0):
+        continue
+    toplam += i
+
+print(toplam)  
