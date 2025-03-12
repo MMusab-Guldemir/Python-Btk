@@ -1,0 +1,29 @@
+urunler = [
+    {"urunAdi": "Hp Victus", "Fiyat" : 32999 },
+    {"urunAdi": "Lenova ThinkPad", "Fiyat" : 25499 },
+    {"urunAdi": "Apple Macbook", "Fiyat" : 49999 },
+    {"urunAdi": "Huawei Matebook", "Fiyat" : 26999 },
+    {"urunAdi": "Casper Nirvana", "Fiyat" : 20000 },
+    {"urunAdi": "Hp Victus2", "Fiyat" : 30000 }
+]
+
+
+for urun in urunler:
+    print(f"{urun['urunAdi']} marka ürünün fiyati {urun['Fiyat']} Türk Lirasidir.")
+
+toplam = 0
+for urun in urunler:
+    toplam += urun["Fiyat"]
+print(f"ürün toplami: {toplam}")
+
+
+for urun in urunler:
+    if urun["Fiyat"] >= 25000 and urun["Fiyat"] <= 40000:
+        print(f"{urun['urunAdi']}")
+
+
+kelime = input("aramak istediğiniz ürün: ")
+
+for urun in urunler:
+    if(urun['urunAdi'].lower().find(kelime.lower()) > -1):
+        print(f"{urun['urunAdi']}")
