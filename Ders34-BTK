@@ -1,0 +1,30 @@
+baslangic = int(input("Başlangıç: "))
+bitis = int(input("Bitis: "))
+
+# i = baslangic
+while(i < bitis):
+    if(i % 2 == 0):
+        print(i)
+    i += 1
+
+i = 100
+while (i > 0):
+    print(i)
+    i -= 1
+
+i = 0
+sayilar = []
+while(i < 5):
+    sayi = int(input("Sayı: "))
+    sayilar.append(sayi)
+    i += 1
+
+sayilar.sort()
+print(sayilar)
+
+username = "" #boşluk yoksa false varsa true
+
+while not username:
+    username = input("Kullanıcı adı: ")
+
+print("girilen username: " + username)
