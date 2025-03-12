@@ -1,0 +1,31 @@
+sayilar = [3,5,7,2,12,32,45]
+
+for sayi in sayilar:
+    print(sayi)
+
+for sayi in sayilar:
+    if (sayi % 3 == 0):
+        print(sayi)
+
+
+toplam = 0
+for sayi in sayilar:
+    toplam += sayi
+    print(toplam) #her gelen sayıyı topluyor.
+
+urunler = ["iphone 13","samsung s24","samsung s22","iphone 15","iphone 14"]
+adet = 0
+
+for urun in urunler:
+    index = (urun.find('iphone')) #index yerine find kullandık bulamıyorsa -1 yazıyor
+    if index > -1:
+        adet += 1
+        print(urun)
+print(adet)
+
+for urun in urunler:
+    index = (urun.find('samsung')) #index yerine find kullandık bulamıyorsa -1 yazıyor
+    if index > -1:
+        adet += 1
+        print(urun)  
+print(adet) 
