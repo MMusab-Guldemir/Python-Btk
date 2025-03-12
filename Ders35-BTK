@@ -1,0 +1,19 @@
+devammi = "e"
+ogrenciler = []
+
+while devammi != "h":
+    ogrenciNo = input("Öğrenci no: ")
+    ogrenciAd = input("Öğrenci adı: ")
+    ogrenciSoyad = input("Öğrenci soyadı: ")
+
+    ogrenciler.append({
+        "ogrenciNo": ogrenciNo,
+        "ogrenciAd": ogrenciAd,
+        "ogrenciSoyad": ogrenciSoyad
+    })
+
+    devammi = input("Devam etmek ister misiniz? (e/h): ")
+
+# Öğrencileri yazdırma
+for ogrenci in ogrenciler:
+    print(f"{ogrenci['ogrenciNo']} numaralı öğrencinin adı {ogrenci['ogrenciAd']} {ogrenci['ogrenciSoyad']}")
