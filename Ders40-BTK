@@ -1,0 +1,38 @@
+def selamlama(isim):
+    return "Merhaba, " + isim
+
+
+print(selamlama("Musab"))
+print(selamlama("Güldemir"))
+
+def toplam(sayi1, sayi2):
+    return sayi1 + sayi2
+
+print(toplam(10,20))
+print(toplam(10,30))
+
+
+def yasHesaapla(dogumYili):
+    return 2025 - dogumYili
+
+def emekligeKacYilKaldi(dogumYili, isim):
+    yas = yasHesaapla(dogumYili)
+
+# print(yasHesaapla(1983))
+# print(yasHesaapla(2010))
+# print(yasHesaapla(1986))
+
+
+    kalanSure = 65 - yas
+
+    if kalanSure > 0:
+        return f"{isim}, emekliliğinize {kalanSure} yil kaldi"
+
+    else:
+        return f"{isim}, zaten {abs(kalanSure)} yıl önce emekli oldunuz." #abs mutlak değer yani negatifi pozitifwe çeviriyor.
+
+
+print(emekligeKacYilKaldi(1983, "Musab"))
+print(emekligeKacYilKaldi(1954, "Ahmet"))
+
+
