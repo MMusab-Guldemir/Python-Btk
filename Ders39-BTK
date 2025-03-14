@@ -1,0 +1,47 @@
+def selamlama():
+    for i in range(10):
+        print("Merhaba BTK Akademi")
+
+
+selamlama() #kısa yol oluşturuyormuş gibi
+
+a = 10
+b = 20
+
+def toplama():
+    print(a + b)
+
+toplama
+
+
+#------------------------------------
+
+
+def toplam():
+    return 10 + 20
+
+sonuc = toplam()
+
+print(sonuc)
+
+def yil():
+    import datetime
+    return datetime.datetime.now().year #yılı alıyoruz
+
+def saat():
+    import datetime
+    return datetime.datetime.now().hour
+
+def yanHesapla():
+    return yil() - 1983
+
+print(yanHesapla())
+
+
+def selamlama():
+    if(saat() < 12):
+        return "Günaydın"
+    else:
+        return "Merhaba"
+
+print(selamlama()) 
