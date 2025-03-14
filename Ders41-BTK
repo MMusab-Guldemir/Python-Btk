@@ -1,0 +1,53 @@
+def yazdir(text, adet):
+    return text * adet
+
+print(yazdir("Musab ", 5))
+
+
+
+def hesapla(kisa, uzun):
+    alan = kisa * uzun
+    cevre = 2 * (kisa + uzun)
+
+    return f"alan: {alan} çevre: {cevre}"
+
+sonuc = hesapla(3,5)
+sonuc = hesapla(4,5)
+print(sonuc)
+
+
+
+def yaziTura():
+    import random
+    sayi = random.random()
+
+    if sayi > 0.5:
+        return "Tura"
+    else:
+        return "Yazi"
+
+sonuc = yaziTura()
+print(sonuc) 
+
+
+def asalSayilariBul(sayi1, sayi2):
+    for sayi in range(sayi1, sayi2 + 1):
+        if(sayi > 1):
+            for i in range(2, sayi):
+                if (sayi % i == 0):
+                    break
+            else:
+                print(sayi)
+
+asalSayilariBul(10,20)
+
+def tamBolenleriBul(sayi):
+    tamBolenler = []
+
+    for i in range(2, sayi):
+        if(sayi % i == 0):
+            tamBolenler.append(i)
+
+    return tamBolenler
+
+print(tamBolenleriBul(20)) 
