@@ -1,0 +1,11 @@
+def full_Name(firstName: str, lastName: str,) -> str:
+    return f"Your name is {firstName} {lastName}"
+
+#str yaparak girilen bilgileri str olarak kılıyoruz dışarda yaptıüımızda çıktı str olcak diyoruz.
+
+sonuc = full_Name("Musab","Güldemir")
+sonuc = full_Name(lastName="Musab",firstName="Güldemir")
+sonuc = full_Name(lastName="Musab",firstName="Güldemir")
+sonuc = full_Name(firstName="Musab",lastName="Güldemir")
+
+print(sonuc)
