@@ -1,0 +1,27 @@
+def selamlama(isim = "Kullanici", mesaj = "İyi Günler" ):
+    return f"{mesaj} {isim}"
+
+sonuc = selamlama("Musab","Merhaba")
+sonuc = selamlama("Ahmet","Selam")
+sonuc = selamlama("Ali") 
+
+
+def usAlma(taban, us = 2):
+    return(taban ** us)
+
+sonuc = usAlma(2,3)
+sonuc = usAlma(5)
+
+def toplam(a, b):
+    return a + b
+
+def cikarma(a, b):
+    return a - b
+
+def islem(a, b, fn): #fn koyarak belirtiyoruz
+    return fn(a, b)
+
+sonuc = islem(10,20,toplam)
+
+
+print(sonuc) 
