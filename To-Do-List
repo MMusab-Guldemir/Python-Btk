@@ -1,0 +1,28 @@
+# Listeye kaç öğe eklemek istediğini soralım
+liste_sayisi = int(input("Kaç öğe eklemek istersiniz? "))
+
+# Listeyi tutacak listeyi başlatıyoruz
+liste = []
+
+# Kullanıcıdan belirtilen sayıda öğe alıyoruz
+for i in range(liste_sayisi):
+    liste_ekleme = input(f"{i+1}. öğeyi girin: ")
+    liste.append(liste_ekleme)
+
+# Listeyi yazdırma
+print("\n---Listeniz---")
+for i in liste: 
+    print(i)
+
+# Görevlerin durumu
+for i in range(liste_sayisi):
+    durumu = input(f"{liste[i]} yapildi mi? (e/h): ")
+    if durumu.lower() == "e":
+        liste[i] = liste[i] + " (yapildi)"
+    elif durumu.lower() == "h":
+        liste[i] = liste[i] + " (yapilmadi)"
+
+# Güncellenmiş listeyi yazdırma
+print("\n----Güncellenmiş Listeniz----")
+for item in liste:
+    print(item) 
