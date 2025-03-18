@@ -1,0 +1,85 @@
+import tkinter as tk
+from tkinter import messagebox
+
+# Ürün verisi
+urunler = [
+    {"urunAdi": "Hp Victus", "Fiyat" : 32999 },
+    {"urunAdi": "Lenova ThinkPad", "Fiyat" : 25499 },
+    {"urunAdi": "Apple Macbook", "Fiyat" : 49999 },
+    {"urunAdi": "Huawei Matebook", "Fiyat" : 26999 },
+    {"urunAdi": "Casper Nirvana", "Fiyat" : 20000 },
+    {"urunAdi": "Hp Victus2", "Fiyat" : 30000 }
+]
+
+# Ana pencereyi oluşturma
+root = tk.Tk()
+root.title("Ürün Fiyatları")
+root.geometry("500x400")
+
+# Ürünlerin listeleneceği bir metin kutusu
+listbox = tk.Listbox(root, width=50, height=10)
+listbox.pack(pady=10)
+
+# Toplam fiyatı gösteren bir etiket
+toplam_label = tk.Label(root, text="Toplam Fiyat: 0", font=("Arial", 12))
+toplam_label.pack(pady=10)
+
+# Ürünleri listeleme fonksiyonu
+def urunleri_listele():
+    listbox.delete(0, tk.END)  # Listeyi temizle
+    for urun in urunler:
+        listbox.insert(tk.END, f"{urun['urunAdi']} - {urun['Fiyat']} TL")
+    toplam = sum([urun["Fiyat"] for urun in urunler])
+    toplam_label.config(text=f"Toplam Fiyat: {toplam} TL")
+
+# Fiyat aralığını filtreleme fonksiyonu
+def fiyat_araligi_filtrele():
+    min_fiyat = int(min_entry.get())
+    max_fiyat = int(max_entry.get())
+    listbox.delete(0, tk.END)  # Listeyi temizle
+    for urun in urunler:
+        if min_fiyat <= urun["Fiyat"] <= max_fiyat:
+            listbox.insert(tk.END, f"{urun['urunAdi']} - {urun['Fiyat']} TL")
+    toplam = sum([urun["Fiyat"] for urun in urunler if min_fiyat <= urun["Fiyat"] <= max_fiyat])
+    toplam_label.config(text=f"Toplam Fiyat: {toplam} TL")
+
+# Ürün adı ile arama fonksiyonu
+def urun_ara():
+    kelime = arama_entry.get().lower()
+    listbox.delete(0, tk.END)  # Listeyi temizle
+    for urun in urunler:
+        if kelime in urun["urunAdi"].lower():
+            listbox.insert(tk.END, f"{urun['urunAdi']} - {urun['Fiyat']} TL")
+
+# Arama kutusu ve buton
+arama_label = tk.Label(root, text="Ürün Ara:")
+arama_label.pack(pady=5)
+arama_entry = tk.Entry(root, width=40)
+arama_entry.pack(pady=5)
+arama_button = tk.Button(root, text="Ara", command=urun_ara)
+arama_button.pack(pady=5)
+
+# Fiyat aralığı kutuları
+fiyat_araligi_label = tk.Label(root, text="Fiyat Aralığı:")
+fiyat_araligi_label.pack(pady=5)
+min_label = tk.Label(root, text="Min Fiyat:")
+min_label.pack(pady=5)
+min_entry = tk.Entry(root)
+min_entry.pack(pady=5)
+max_label = tk.Label(root, text="Max Fiyat:")
+max_label.pack(pady=5)
+max_entry = tk.Entry(root)
+max_entry.pack(pady=5)
+
+fiyat_araligi_button = tk.Button(root, text="Fiyat Aralığına Göre Filtrele", command=fiyat_araligi_filtrele)
+fiyat_araligi_button.pack(pady=10)
+
+# Tüm ürünleri listele butonu
+listele_button = tk.Button(root, text="Tüm Ürünleri Listele", command=urunleri_listele)
+listele_button.pack(pady=10)
+
+# Başlangıçta tüm ürünleri listele
+urunleri_listele()
+
+# Ana pencereyi çalıştırma
+root.mainloop()
