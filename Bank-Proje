@@ -1,0 +1,44 @@
+class BankAccount:
+    def __init__(self, balance=0):
+        self.balance = balance
+
+    def deposit(self, amount): 
+        if amount > 0:
+            self.balance += amount
+            print(f"{amount} TL yatirildi.")
+        else:
+            print("Geçersiz tutar.")
+
+    def withdraw(self, amount):
+        if amount > 0 and amount <= self.balance:
+            self.balance -= amount
+            print(f"{amount} TL çekildi.")
+        else:
+            print("Yetersiz bakiye veya geçersiz tutar.")
+
+    def check_balance(self):
+        print(f"Bakiyeniz: {self.balance} TL")
+
+account = BankAccount()
+
+while True:
+    print("\nBanka Hesap Sistemi:")
+    print("1. Bakiye Sorgula")
+    print("2. Para Yatir")
+    print("3. Para Çek")
+    print("4. Çikiş")
+
+    choice = input("Seçiminizi yapin: ")
+
+    if choice == "1":
+        account.check_balance()
+    elif choice == "2":
+        amount = float(input("Yatirmak istediğiniz tutari girin: "))
+        account.deposit(amount)
+    elif choice == "3":
+        amount = float(input("Çekmek istediğiniz tutari girin: "))
+        account.withdraw(amount)
+    elif choice == "4":
+        break
+    else:
+        print("Geçersiz seçim.")
