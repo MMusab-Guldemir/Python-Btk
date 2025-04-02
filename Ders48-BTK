@@ -1,0 +1,9 @@
+with open("deneme.txt", "a", encoding="utf-8") as file:
+    file.seek(0)
+    file.write("birinci satir \n") #a ekelme yapmaya yarar yani append yapmaya
+
+#r+ hem okuma hem yazma yapar
+
+with open("deneme.txt", "r+", encoding="utf-8") as file:
+    file.seek(0)
+    file.write("birinci satir \n")
