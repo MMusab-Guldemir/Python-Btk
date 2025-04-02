@@ -1,0 +1,90 @@
+hesaplar = [
+    {
+        "ad": "Musab Gldmr",
+        "hesapNo": "12345",
+        "bakiye": 20000,
+        "ekHesap": 5000,
+        "username": "musab",
+        "password": "1234",
+    },
+    {
+        "ad": "Ahmet Gldmr",
+        "hesapNo": "12345",
+        "bakiye": 30000,
+        "ekHesap": 4000,
+        "username": "ahmet",
+        "password": "1234",
+    }
+]
+
+def menu(hesap):
+    print("\n")
+
+    print(f"Merhaba, {hesap['ad']}")
+
+    print("1. Bakiye Sorgula")
+    print("2. Para Çek")
+    print("3. Para Yatir")
+
+    islem = input("İşlem Seçiniz: ")
+
+    if islem == "1":
+        bakiyeSorgula(hesap)
+    elif islem == "2":
+        paraCekme(hesap)
+    elif islem == "3":
+        paraYatirma(hesap)
+    else:
+        print("Geçersiz işlem seçimi!")
+        
+    menu(hesap)  
+
+def paraYatirma(hesap):
+    miktar = float(input("Yatirmak istediğiniz miktar: "))
+    
+    if miktar > 0:
+        hesap["bakiye"] += miktar
+        print(f"{miktar} TL yatirildi. Güncel bakiyeniz: {hesap['bakiye']}")
+    else:
+        print("Geçersiz miktar! Lütfen pozitif bir miktar girin.")
+
+
+def bakiyeSorgula(hesap):
+    print(f"Bakiyeniz: {hesap['bakiye']}")
+    print(f"Ek Hesap Bakiyeniz: {hesap['ekHesap']}")
+    print(f"Toplam Bakiyeniz: {hesap['bakiye'] + hesap['ekHesap']}")
+
+def paraCekme(hesap):
+    miktar = float(input("Çekmek istediğinizn miktar: "))
+    
+    if hesap["bakiye"] >= miktar:
+        hesap["bakiye"] -= miktar
+        print("Paranizi alabilirsiniz.") 
+    else:
+        Toplam = hesap["bakiye"] + hesap["ekHesap"]
+        if Toplam >= miktar:
+            ekHesapKullanimi = input("Ek hesabinizi kullanmak ister misiniz? (e/h): ")
+            if ekHesapKullanimi == "e":
+                hesap["bakiye"] = 0
+                hesap["ekHesap"] -= (miktar - hesap["bakiye"])
+                print("Paranizi alabilirsiniz.")
+            else:
+                print("Yetersiz bakiye!")
+        else:
+            print("Yetersiz bakiye!")
+
+def login():
+    username = input("username: ")
+    password = input("parola: ")
+
+    isLoggedIn = False
+
+    for hesap in hesaplar:
+        if hesap["username"] == username and hesap["password"] == password:
+            isLoggedIn = True
+            menu(hesap)
+            break
+    if not(isLoggedIn):
+        print("Kullanici adi veya parola hatali!")
+
+login() 
