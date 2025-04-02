@@ -1,0 +1,34 @@
+    Dosya açmak ve oluşturmak için open() fonksiyonu kullanilir.
+    
+    Kullanimi          : open(dosya_adi,dosya_erişme_modu)
+    dosya_erişme_modu  : dosyayi hangi amaçla açtiğimizi belirtir.
+    "r" okuma modu     : okuma modu. Belirtilen konumda dosya olmalidir.
+    seek               : cursor konumu
+"""
+
+f = open("log.txt", encoding = 'utf-8') #utf türkçe karakteri düzeltiyor
+
+print(file.read())
+
+file.close() 
+
+with open("log.txt", encoding = 'utf-8') as file:
+    print(f.read(10))
+    print(f.tell(10)) #yukardakinin aynısı
+    print(f.read())
+    print(f.tell())
+try:
+    with open("log.txt", encoding = 'utf-8') as file:
+     for i in file:  
+         print(i, end = "")
+except FileNotFoundError as e:
+    print("Dosya bulunamadi" + e.)
+
+print(f.read())
+print(f.read())
+
+with open("dosya.txt","w", encoding = 'utf-8') as file:
+    for i in file:
+        print(i, end = "")
+    file.write("Merhaba dünya\n")
+    
