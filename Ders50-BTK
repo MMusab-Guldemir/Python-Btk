@@ -1,0 +1,29 @@
+# Class
+class Product:
+    # metod
+    #attribute, property
+    def __init__(self, name, price, isActive): #çağırma yapıyoruz # __init__ bak
+        self.name = name
+        self.price = price
+        self.isActive = True # classın içinde tanımladık # classın içinde tanımladık
+
+# Instance, Object, Nesne
+p1 = Product("İphone 16 Pro Max",83500, True) # Product classından bir nesne oluşturduk # Product classından bir nesne oluşturduk
+p2 = Product("İphone 15 Pro",67000, True)
+p3 = Product("İphone 14",60000, False) 
+
+# sonuc = type(p1)  # <class '__main__.Product'>
+# sonuc = type(p2)  # <class '__main__.Product'>
+
+sonuc = p1.name # roductan türetilen birer nesne # tek tek çağırıyoruz belirterek
+sonuc = p1.price # Product classından türetilen birer nesne # tek tek çağırıyoruz belirterek
+
+urunler = [p1, p2, p3] # liste oluşturduk
+
+for urun in urunler:
+    if urun.isActive == True: # isActive True olanları listele
+        print(f"Ürün Adi: {urun.name} - Fiyat: {urun.price} - Aktif: {urun.isActive}") 
+    else:
+        print("Ürün Stokta Yok!")
+
+# print(sonuc)  # <class '__main__.Product'> #produc classı 
