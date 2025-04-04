@@ -1,0 +1,28 @@
+#50. ders devamı
+
+class Product:
+    def __init__(self, name, price, isActive):
+        self.name = name
+        self.price = price
+        self.isActive = isActive
+
+    #instance method
+    def intro(self):
+        print(f"Ürün adı: {self.name}, Fiyati: {self.price}")
+
+    def kdv_price(self):
+        return self.price * 1.20
+
+
+#Instance, Object
+
+p1 = Product("Iphone 16 Pro", 50000, True)
+p2 = Product("Samsung", 40000, True)
+p3 = Product("Nokia 3310", 30000, True)
+
+urunler = [p1, p2, p3]
+
+for urun in urunler:
+    if urun.isActive:
+        print(urun.intro())
+        print("Kdv Fiyati: ",urun.kdv_price()) 
