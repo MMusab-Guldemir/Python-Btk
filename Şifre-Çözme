@@ -1,0 +1,45 @@
+import random
+import string
+
+chars = " " + string.punctuation + string.digits + string.ascii_letters
+
+chars = list(chars)
+key = chars.copy()
+
+random.shuffle(key)
+
+# print("Chars: ", chars)
+# print("Key: ", key)
+
+
+def Şifreleme() :
+    plain_text = input("Enter the text to encrypt: ")
+    cipher_text = ""
+    for letter in plain_text:
+        index = chars.index(letter)
+        cipher_text += key[index]
+
+    print("Original Text: ", plain_text)
+    print("Cipher Text: ", cipher_text)
+
+while(True):
+    Şifreleme()
+    choice = input("Do you want to encrypt another text? (y/n): ")
+    if choice.lower() != 'y':
+        break
+
+
+def ŞifreÇözme():
+    cipher_text = input("Enter the text to decrypt: ")
+    plain_text = ""
+    for letter in cipher_text:
+        index = key.index(letter)
+        plain_text += chars[index]
+
+    print("Cipher Text: ", cipher_text)
+    print("Original Text: ", plain_text)
+while(True):
+    ŞifreÇözme()
+    choice = input("Do you want to decrypt another text? (y/n): ")
+    if choice.lower() != 'y':
+        break 
