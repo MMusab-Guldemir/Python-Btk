@@ -1,0 +1,31 @@
+import random
+
+def oyun():
+    print("Taş Kağit Makas Oyununa Hoş Geldiniz")
+    print("Kurallar:")
+    print("1. Taş, Makasi yener.")
+    print("2. Kağit, Taşi yener.")
+    print("3. Makas, Kağidi yener.")
+
+    secim = input("Lütfen seçiminizi yapiniz: (Taş: t, Kağit: k, Makas: m) :   ").lower()
+
+    bilgisiyar_secim = random.choice(["t", "k", "m"])
+
+    print("Bilgisayarin seçimi:", bilgisiyar_secim)
+
+
+    if secim == bilgisiyar_secim:
+        print("Beraberlik!")  
+    elif(secim == "t" and bilgisiyar_secim == "m") or \
+        (secim == "k" and bilgisiyar_secim == "t") or \
+        (secim == "m" and bilgisiyar_secim == "k"):
+        print("Kazandiniz!")
+    else:
+        print("Kaybettiniz!")
+
+while True:
+    oyun()
+    devam = input("Tekrar oynamak ister misiniz? (Evet: e, Hayir: h) : ").lower()
+    if devam != "e":
+        print("Oyun bitti.")
+        break
