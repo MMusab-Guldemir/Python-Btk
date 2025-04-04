@@ -1,0 +1,58 @@
+import tkinter as tk
+import random
+
+# Oyunun temel fonksiyonu
+def oyun(secim):
+    # Bilgisayarın seçimi
+    bilgisayar_secim = random.choice(["t", "k", "m"])
+    
+    # Sonucu belirle
+    if secim == bilgisayar_secim:
+        sonuc = "Beraberlik!"
+    elif (secim == "t" and bilgisayar_secim == "m") or \
+         (secim == "k" and bilgisayar_secim == "t") or \
+         (secim == "m" and bilgisayar_secim == "k"):
+        sonuc = "Kazandınız!"
+    else:
+        sonuc = "Kaybettiniz!"
+    
+    # Sonuç ve bilgisayarın seçimi etiketlerini güncelle
+    label_sonuc.config(text=sonuc)
+    label_bilgisayar_secimi.config(text=f"Bilgisayarın Seçimi: {bilgisayar_secim.upper()}")
+
+
+# GUI'yi oluştur
+root = tk.Tk()
+root.title("Taş Kağıt Makas Oyunu")
+
+# Başlık etiketi
+label_baslik = tk.Label(root, text="Taş Kağıt Makas Oyunu", font=("Arial", 16))
+label_baslik.pack(pady=10)
+
+# Bilgisayarın seçimi etiketi
+label_bilgisayar_secimi = tk.Label(root, text="Bilgisayarın Seçimi: ", font=("Arial", 12))
+label_bilgisayar_secimi.pack(pady=5)
+
+# Sonuç etiketi
+label_sonuc = tk.Label(root, text="", font=("Arial", 14, "bold"))
+label_sonuc.pack(pady=10)
+
+# Kullanıcının seçim butonları
+frame = tk.Frame(root)
+frame.pack(pady=20)
+
+button_tas = tk.Button(frame, text="Taş", width=10, height=2, command=lambda: oyun("t"))
+button_tas.grid(row=0, column=0, padx=10)
+
+button_kagit = tk.Button(frame, text="Kağıt", width=10, height=2, command=lambda: oyun("k"))
+button_kagit.grid(row=0, column=1, padx=10)
+
+button_makas = tk.Button(frame, text="Makas", width=10, height=2, command=lambda: oyun("m"))
+button_makas.grid(row=0, column=2, padx=10)
+
+# Çıkış butonu
+button_exit = tk.Button(root, text="Çıkış", width=20, height=2, command=root.quit)
+button_exit.pack(pady=20)
+
+# Ana döngü
+root.mainloop()
