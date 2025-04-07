@@ -1,0 +1,25 @@
+class BankaHesabi:
+    def __init__(self, hesapSahibi):
+        self.hesapSahibi = hesapSahibi
+        self.bakiye = 0.0
+        
+    def paraYatir(self, miktar):
+        self.bakiye += miktar
+        return self.bakiye
+
+    def get_bakiye(self):
+        return self.bakiye
+    
+    def paraCek(self, miktar):
+        if miktar > self.bakiye:
+            print("Yetersiz bakiye!")
+            return False
+        else:
+            self.bakiye -= miktar
+            return self.bakiye
+        
+hesap = BankaHesabi("Musab")
+print(hesap.paraYatir(1000))
+print(hesap.get_bakiye())
+hesap.paraCek(250)
+print(hesap.get_bakiye()) 
