@@ -1,0 +1,36 @@
+# Kendin Hata Fırlatma
+
+# print(10 /0)
+
+
+x = 10
+
+if x > 5:
+    raise Exception("X 5'den büyük olamaz.")
+    # raise ValueError("X 5'den büyük olamaz.")
+
+
+def renklendir(text, color):
+    renkler = ("Blue", "Red", "Green", "Orange", "Black", "White")
+
+    if type(text) is not str:
+        raise TypeError("Text string tipinde olmalidir.")
+    
+    if type(color) is not str:
+        raise TypeError("Color string tipinde olmalidir.")
+    
+    if renk in renkler:
+        raise ValueError("Renk listede yok.")
+
+    print(f"{text} {color} renkte yazdirildi.")
+
+
+
+
+try:
+    renklendir("Hi", "Red")
+    renklendir(10, "Red")
+    renklendir("Hi", 10)
+    renklendir("Hi", "Purple") 
+except (TypeError, ValueError) as e:
+    print(e)
