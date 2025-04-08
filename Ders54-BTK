@@ -1,0 +1,17 @@
+while True:
+    try:
+        x = int(input("x: "))
+        y = int(input("y: "))
+    except (ZeroDivisionError, ValueError) as e:
+        print("X ve Y sayi olmalidir , sifir olamaz")
+        print(e) #  Hata mesajını gösterir
+    # except ValueError:
+    #     print("x ve y sayi olmalidir")
+    except exsception as e: # diğerleri olmasa hatayı gösterir # ne hatası olduğu yani
+        print("Bilinmeyen bir hata oluştu")
+        print(e)
+    else: #hiçbiri çalışmazsa bu çalışır 
+        print("Herşey yolunda")
+        # yani burda bu döngüye girerse o printi çalıştır if gibi
+    finally: # her durumda çalışır
+        print("Finally Bloğu çalişti")
