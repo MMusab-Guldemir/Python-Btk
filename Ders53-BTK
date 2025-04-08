@@ -1,0 +1,56 @@
+#error
+
+try:
+    x = int(input("x: "))
+    y = int(input("y: "))
+    print(x + y)
+except:
+    print("Bir hata oluştu.") # burda hata varsa yani hatao lutşuğunda if gibi
+
+
+#-------------------------------------
+#           Hata Türleri
+
+#error
+
+x = int(input("x: "))
+y = int(input("y: "))
+print(x + y) 
+
+# ZeroDivisionError
+# ValueError 
+
+# SyntaxError # Yazım yanlışı
+
+
+# ryfhgg
+# def intro(:
+#     pass
+
+
+# NameError # Tanımlanmamış bir değişken kulannımı
+# TypeError # Yanlış türde veri kullanımı
+# print(ad) 
+
+# TypeError: object of type 'int' has no len()
+
+len(10) 
+10 + 'a'
+
+# IndexError # Listede olmayan bir indexe erişim
+#Yanlış kullanımı
+
+liste = [10]
+liste[1]
+
+
+# KeyError # Sözlükte olmayan bir anahtara erişim
+
+a = {}
+a["ad"]
+
+# AttributeError # Yanlış bir nesneye erişim 
+#olmayan bir özelliğe erişim 
+
+"merhaba".upper()
+"merhaba".Upper() # Yanlış kullanımı
