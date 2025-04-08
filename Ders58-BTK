@@ -1,0 +1,27 @@
+import pdb
+
+one = "one"
+two = "two"
+
+pdb.set_trace()  #uygulamayı durduryoruz
+
+sonuc = one + two
+
+three = "three"
+
+sonuc += three
+
+print(sonuc)
+
+def toplama(a,b,c):
+    import pdb; pdb.set_trace()  # uygulamayı durduryoruz
+    return a + b + c
+
+toplama(10,20,30)
+
+#---- pdb -----
+
+# L => listeleme
+# n => bir sonraki satıra geç
+# c => devam et
+# p => değişkenin değerini yazdır
