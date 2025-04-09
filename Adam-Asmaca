@@ -1,0 +1,75 @@
+import random
+
+words = ("apple", "orange", "banana", "cherry", "peach", "mango")
+
+hangman_art = {  
+    0: ("  ", "  ", "  "),
+    1: (" O ", "  ", "  "),
+    2: (" O ", " | ", "   "),
+    3: (" O ", " | ", "/  "),
+    4: (" O ", " | ", "/ \\"),
+    5: (" O ", "/| ", "/ \\"),
+    6: (" O ", "/|\\", "/ \\"),
+}
+
+def display_man(wrong_guesses):
+    print("************")
+    for line in hangman_art[wrong_guesses]:
+        print(line)
+    print("************") 
+
+def display_hint(hint):
+    print(" ".join(hint))
+
+def display_answer(answer):
+    print(" ".join(answer))
+
+def main():
+    answer = random.choice(words)
+    hint = ["_"] * len(answer)
+    wrong_guesses = 0
+    guessed_letters = set()
+    is_running = True
+
+    while is_running:
+        print(hint)
+        display_man(wrong_guesses)
+        display_hint(hint)
+        display_answer(answer)
+
+        guess = input("Enter a letter: ").lower()
+        
+        # Kontroller doğru yere taşındı
+        if len(guess) != 1 or not guess.isalpha():
+            print("Invalid input.")
+            continue  # Yanlış girişte döngü başa dönsün
+
+        if guess in guessed_letters:
+            print(f"{guess} is already guessed.")
+            continue  # Eğer harf zaten tahmin edildiyse, döngü başa dönsün
+
+        guessed_letters.add(guess)
+
+        if guess in answer:
+            for i in range(len(answer)):
+                if answer[i] == guess:
+                    hint[i] = guess
+        else: 
+            wrong_guesses += 1
+
+        # Eğer kazanmışsa
+        if "_" not in hint:
+            display_man(wrong_guesses)
+            display_answer(answer)
+            print("YOU WIN!")
+            is_running = False
+        # Eğer kaybetmişse
+        elif wrong_guesses >= len(hangman_art) - 1:
+            display_man(wrong_guesses)
+            display_answer(answer)
+            print("YOU LOSE!")
+            is_running = False
+
+# Ana fonksiyonu çalıştır
+if __name__ == "__main__":
+    main()
