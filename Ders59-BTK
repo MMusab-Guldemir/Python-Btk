@@ -1,0 +1,31 @@
+sayi = 20
+
+sayilar = [1, 2, 3, 4, 5]
+
+urun = {
+    "urunnAdi": "Iphone 16 Pro",
+    "fiyati": 20000,
+    "renkler": ["siyah", "beyaz", "mavi"],
+}
+
+
+def toplama(a,b):
+    return a + b
+
+import module # Ulaşılabilir bir şekle geliyor 
+
+sonuc = module.sayi
+sonuc = module.sayilar + 10
+sonuc = module.urun["urunnAdi"]
+sonuc = module.urun["renkler"][0]
+sonuc = module.toplama(10, 20)
+
+import module as m # Kısaltma yaparak import ettik
+sonuc = m.sayi
+
+from module import sayi, sayilar, urun, toplama # Tek tek import ettik
+
+from module import * # Hepsini import ettik
+sonuc = urun
+
+print(sonuc)
