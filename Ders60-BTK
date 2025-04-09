@@ -1,0 +1,43 @@
+from methods import *
+
+urunEkle("Iphone 16 Pro Max", 100000)
+urunEkle("Samsung S5", 94000)
+
+
+for i in urunlerGetir():
+    print(i["urunAdi"])
+
+
+urunGuncelle(1, "Iphone 11 Pro Max", 15000)
+
+
+for i in urunlerGetir():
+    print(i["urunAdi"])
+
+urunler = [
+    {"id": 1, "urunAdi": "Iphone 13 Pro", "fiyat": 10000},
+    {"id": 2, "urunAdi": "Iphone 14 Pro", "fiyat": 25000},
+    {"id": 3, "urunAdi": "Iphone 15 Pro", "fiyat": 40000},
+    {"id": 4, "urunAdi": "Iphone 16 Pro", "fiyat": 65000},
+] 
+
+import db
+
+def urunEkle(urunAdi, fiyat): 
+    db.urunler.append({
+        "id": len(db.urunler) + 1,
+        "urunAdi": urunAdi,
+        "fiyat": fiyat
+    })
+
+
+def urunGuncelle(id, urunAdi, fiyat):
+    for urun in db.urunler:
+        if (urun["id"] == id):
+            urun["urunAdi"] = urunAdi
+            urun["fiyat"] = fiyat
+            break
+
+
+def urunlerGetir():
+    return db.urunler 
