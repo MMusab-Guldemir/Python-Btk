@@ -1,0 +1,32 @@
+
+sonuc = [i for i in range(1,101) if i % 3 == 0 if i % 4 == 0]
+# print(sonuc)
+
+text = "Hello 12345 World"
+sonuc = [i for i in text if i.isdigit()]
+# print(sonuc) # liste şeklinde 1,2,3,4,5 yazar
+
+sicakliklar = [20, 15, 0, -5, -2]
+sonuc = [i if i >= 4 else "Buzlanma Tehlikesi" for i in sicakliklar]
+# print(sonuc)
+
+ogrenciler = ["Ali", "Ahmet", "Canan"]
+notlar = [50, 60, 80]
+
+# [("Ali", 50), ("Ahmet", 60), ("Canan", 80)]
+
+liste = [(ogrenciler[i], notlar[i]) for i in range(0, len(ogrenciler))]
+liste_dict = { key:value for (key, value) in liste if value > 50}
+print(liste_dict)
+
+
+sonuc = []
+
+
+
+for x in range(3):
+    for y in range(3):
+        for z in range(3):
+            sonuc.append((x, y))    
+
+sonuc = [(x,y,z) for x in range(3) for y in range(3) for z in range(3)] 
