@@ -1,0 +1,23 @@
+sayilar = []
+
+for i in range(5):
+    sayilar.append(i)
+
+print(sayilar)
+
+#yapmış olduğumuz yukardaki kodu 1 satırda yazmamız 3 satır yerine
+
+sayilar2 = [i for i in range(5)]
+
+# sayilar2 = [i * 2 for i in range(5)] # 0,2,4,6,8 
+#2yle çarpımı
+
+print(sayilar2)
+
+kurum = "BTK Akademi"
+
+for i in kurum: #alt alta yazar
+    print(i.upper()) # büyük harf yapar
+
+sonuc = [i.upper() for i in kurum] # büyük harf yapar
+print(sonuc) #listeyi tek satırda yazdırır
