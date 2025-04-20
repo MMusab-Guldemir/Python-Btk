@@ -1,0 +1,30 @@
+sayiar = [1,3,5,-4,-3]
+
+# def negatifSayiar(x):
+#     if x < 0:
+#         return True
+#     else:
+#         return False
+
+sonuc = list(filter(lambda x: x < 0, sayiar))
+sonuc = list(filter(lambda x: x % 2 == 2, sayiar))
+
+isimler = ["çinar","ali","ada","yiğit","sena"]
+
+filterResult = list(filter(lambda x: x[0] == 'a', isimler))
+
+sonuc = list(map(lambda x: x.upper(), filter(lambda x: x[0] == 'a',isimler)))
+# yada filter yerine filterresult yalacak
+
+users = [
+    {"username": "sadikturan", "posts": ["post1", "post2"]},
+    {"username": "senaturan", "posts": []},
+    {"username": "yiğitbilgi", "posts": ["post1", "post2","post3"]}
+]
+
+sonuc = list(filter(lambda u: len(u["posts"]) > 0, users))
+sonuc = list(map(lambda u: u["username"], sonuc))
+
+sonuc = [user["username"].upper() for user in users if len(user["posts"]) > 0]
+
+print(sonuc)
