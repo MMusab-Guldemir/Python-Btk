@@ -1,0 +1,22 @@
+# Any All
+
+sonuc = all([True,True,False])
+sonuc = all([True,True,True]) #1 tanesi bile false olursa false değer döndürür.
+sonuc = any([True,True,True]) # True
+sonuc = any([True,False,False]) # True # 1 tane True varsa yine True döndürür
+
+# And => True and True => all()
+# Or => True or False => any()
+
+sayilar = [0,1,3,5,7,9,52]
+
+sonuc = all([bool(sayi) for sayi in sayilar]) # 0 ise false #hepsi True mu ?
+sonuc = any([bool(sayi) for sayi in sayilar]) # 0 ise false # 1 tanesi True mu ?
+sonuc = [sayi % 2 == 0 for sayi in sayilar]
+
+users = ["ahmet","çinar","ali"]
+
+sonuc = all([users[0] == "a" for user in users])
+sonuc = any([users[0] == "a" for user in users])
+
+print(sonuc)
