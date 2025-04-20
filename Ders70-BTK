@@ -1,0 +1,23 @@
+sayilar = [1,3,5,7,64,32]
+
+sonuc = sum(sayilar)
+sonuc = sum(sayilar, 15) # sayilar + 15
+
+product = [
+    {"title":"iphone 15", "price": 67500},
+    {"title":"iphone 16", "price": 75000},
+    {"title":"iphone 16 Pro", "price": 82500},
+    {"title":"iphone 16 Pro Max", "price": 0}
+]
+
+toplamFiyat = sum([urun["price"] for urun in product])
+urunAdeti = len([urun for urun in product if urun["price"] > 0])
+sonuc = toplamFiyat / urunAdeti
+
+sonuc = round(5.3)
+sonuc = round(5.6)
+sonuc = round(5.5)
+sonuc = round(1.325233, 2) # noktadan sonra 2 hanesi.
+sonuc = round(1.325253, 4) # Yuvarlama yapar noktadan sonra 4 hanesi.
+
+print(sonuc)
