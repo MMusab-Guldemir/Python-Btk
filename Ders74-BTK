@@ -1,0 +1,46 @@
+class Person:
+    def __init__(self, name, surname, age):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        print("Person sinifi türetildi")
+
+    def intro(self):
+        print(self.name, self.surname, self.age)        
+
+class Student(Person):
+    def __init__(self, name, surname, age, number):
+        # Person.__init__(self, name, surname, age)
+        super().__init__(name, surname, age )# yukardakinin aynisi
+        self.number = number
+        print("Student sinifi türetildi.")
+
+    def study(self):
+        print(f"{self.name} ders çalişiyor")
+    
+    def intro(self):
+        print(self.name, self.surname, self.age, self.number)
+
+
+class Teacher(Person):
+    def __init__(self, name, surname, age, branch):
+        # Person.__init__(self, name, surname, age)
+        super().__init__(name, surname, age )# yukardakinin aynisi
+        self.branch = branch
+        print("Teacher sinifi türetildi.")
+
+    def teach(self):
+        print(f"{self.name} Hoca, {self.branch} dersini anlatiyor")
+
+p1 = Person("Musab", "Güldemir", 40)
+p1.intro()
+
+s1 = Student("Çinar", "Akpinar", 7, 105)
+s1.intro()
+# s1.study()
+# print(s1.number)
+
+t1 = Teacher("Yasin", "Korkmaz", 32, "Matematik")
+t1.intro()
+# t1.teach()
+# print(t1.branch)
